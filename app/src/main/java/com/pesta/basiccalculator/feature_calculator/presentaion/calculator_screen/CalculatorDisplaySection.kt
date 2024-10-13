@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.sp
 import com.pesta.basiccalculator.ui.theme.BasicCalculatorTheme
 
 @Composable
-fun CalculatorDisplay(
+fun CalculatorDisplaySection(
     content: String,
     modifier: Modifier = Modifier,
     textSize: TextUnit = 32.sp
@@ -34,10 +34,10 @@ fun CalculatorDisplay(
 
 @Preview
 @Composable
-private fun CalculatorDisplayPreview() {
+private fun CalculatorDisplaySectionPreview() {
     BasicCalculatorTheme {
         Surface(color = MaterialTheme.colorScheme.secondary) {
-            CalculatorDisplay(
+            CalculatorDisplaySection(
                 content = "2+4",
                 modifier = Modifier.fillMaxWidth()
                     .height(200.dp)
