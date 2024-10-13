@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Basic Calculator"
 include(":app")
+include(":Calculator")
