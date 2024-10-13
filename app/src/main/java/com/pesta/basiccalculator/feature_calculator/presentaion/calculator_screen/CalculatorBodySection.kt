@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.pesta.basiccalculator.feature_calculator.presentaion.calculator_screen.components.CalculatorButton
 import com.pesta.basiccalculator.ui.theme.BasicCalculatorTheme
@@ -18,17 +19,19 @@ import com.pesta.basiccalculator.ui.theme.Pink
 @Composable
 fun CalculatorBodySection(
     modifier: Modifier = Modifier,
+    verticalSpacing: Dp = 10.dp,
+    horizontalSpacing: Dp = 10.dp,
     onButtonClicked: (value: String) -> Unit,
 ) {
     Column(
-        verticalArrangement = Arrangement.spacedBy(10.dp),
+        verticalArrangement = Arrangement.spacedBy(verticalSpacing),
         modifier = modifier
     ) {
         val buttonModifier = Modifier
             .weight(1f)
             .aspectRatio(1f)
         Row(
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
+            horizontalArrangement = Arrangement.spacedBy(horizontalSpacing)
         ) {
             CalculatorButton(
                 label = "AC",
@@ -52,7 +55,7 @@ fun CalculatorBodySection(
             )
         }
         Row(
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
+            horizontalArrangement = Arrangement.spacedBy(horizontalSpacing)
         ) {
             CalculatorButton(
                 label = "7",
@@ -76,7 +79,7 @@ fun CalculatorBodySection(
             )
         }
         Row(
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
+            horizontalArrangement = Arrangement.spacedBy(horizontalSpacing)
         ) {
             CalculatorButton(
                 label = "4",
@@ -100,7 +103,7 @@ fun CalculatorBodySection(
             )
         }
         Row(
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
+            horizontalArrangement = Arrangement.spacedBy(horizontalSpacing)
         ) {
             CalculatorButton(
                 label = "1",
@@ -124,7 +127,7 @@ fun CalculatorBodySection(
             )
         }
         Row(
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
+            horizontalArrangement = Arrangement.spacedBy(horizontalSpacing)
         ) {
             CalculatorButton(
                 label = "0",
@@ -155,7 +158,9 @@ fun CalculatorBodySection(
 private fun CalculatorBodySectionPreview() {
     BasicCalculatorTheme {
         CalculatorBodySection(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
+            horizontalSpacing = 0.dp,
+            verticalSpacing = 0.dp
         ) {  }
     }
 }
