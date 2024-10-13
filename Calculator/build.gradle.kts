@@ -9,5 +9,6 @@ java {
 }
 
 dependencies{
+    implementation("net.objecthunter:exp4j:0.4.8")
     testImplementation(libs.testng)
 }

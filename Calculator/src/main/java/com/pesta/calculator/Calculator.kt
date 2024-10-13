@@ -1,5 +1,7 @@
 package com.pesta.calculator
 
+import net.objecthunter.exp4j.ExpressionBuilder
+
 
 /**
  * Calculates the provided formula and returns the result as a long
@@ -11,6 +13,6 @@ package com.pesta.calculator
  * / -> divided by
  * ^ -> to the power of
  */
-fun calculate(formula: String): Long{
-
+fun calculate(formula: String): Double{
+    return ExpressionBuilder(formula).build().evaluate()
 }
