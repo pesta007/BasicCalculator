@@ -11,13 +11,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.pesta.basiccalculator.feature_calculator.presentaion.calculator_screen.sections.CalculatorBodySection
 import com.pesta.basiccalculator.feature_calculator.presentaion.calculator_screen.sections.CalculatorDisplaySection
 import com.pesta.basiccalculator.ui.theme.BasicCalculatorTheme
 
 @Composable
 fun CalculatorScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    viewModel: CalculatorViewModel = viewModel()
 ){
     Column(modifier) {
         CalculatorDisplaySection(
@@ -27,8 +29,9 @@ fun CalculatorScreen(
         CalculatorBodySection(
             verticalSpacing = 0.dp,
             horizontalSpacing = 0.dp,
-            modifier = Modifier.fillMaxWidth()
-        ) {  }
+            modifier = Modifier.fillMaxWidth(),
+            viewModel = viewModel
+        )
     }
 }
 

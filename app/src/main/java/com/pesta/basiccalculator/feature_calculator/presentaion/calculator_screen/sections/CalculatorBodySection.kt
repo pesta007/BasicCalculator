@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.pesta.basiccalculator.feature_calculator.presentaion.calculator_screen.CalculatorViewModel
 import com.pesta.basiccalculator.feature_calculator.presentaion.calculator_screen.components.CalculatorButton
 import com.pesta.basiccalculator.ui.theme.BasicCalculatorTheme
 import com.pesta.basiccalculator.ui.theme.Blue
@@ -18,11 +19,13 @@ import com.pesta.basiccalculator.ui.theme.Pink
 
 @Composable
 fun CalculatorBodySection(
+    viewModel: CalculatorViewModel,
     modifier: Modifier = Modifier,
     verticalSpacing: Dp = 10.dp,
     horizontalSpacing: Dp = 10.dp,
-    onButtonClicked: (value: String) -> Unit,
 ) {
+    val onButtonClicked: (String) -> Unit = {viewModel.append(it)}
+
     Column(
         verticalArrangement = Arrangement.spacedBy(verticalSpacing),
         modifier = modifier
@@ -36,7 +39,7 @@ fun CalculatorBodySection(
             CalculatorButton(
                 label = "AC",
                 color = Pink,
-                onClick = onButtonClicked,
+                onClick = {viewModel.clearExpression()},
                 modifier = buttonModifier
             )
             CalculatorButton(
@@ -160,7 +163,7 @@ fun CalculatorBodySection(
             CalculatorButton(
                 label = "DEL",
                 color = Blue,
-                onClick = onButtonClicked,
+                onClick = {viewModel.deleteSingleEntry()},
                 modifier = buttonModifier
             )
             CalculatorButton(
