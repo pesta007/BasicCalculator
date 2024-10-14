@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.pesta.basiccalculator.feature_calculator.presentaion.calculator_screen.CalculatorViewModel
 import com.pesta.basiccalculator.feature_calculator.presentaion.calculator_screen.components.CalculatorButton
 import com.pesta.basiccalculator.ui.theme.BasicCalculatorTheme
@@ -183,7 +184,8 @@ private fun CalculatorBodySectionPreview() {
         CalculatorBodySection(
             modifier = Modifier.fillMaxWidth(),
             horizontalSpacing = 0.dp,
-            verticalSpacing = 0.dp
-        ) { }
+            verticalSpacing = 0.dp,
+            viewModel = viewModel()
+        )
     }
 }
