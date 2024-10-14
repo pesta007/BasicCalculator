@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -23,7 +24,7 @@ fun CalculatorScreen(
 ){
     Column(modifier) {
         CalculatorDisplaySection(
-            content = "312",
+            content = viewModel.expressionFlow.collectAsState().value,
             modifier = Modifier.fillMaxWidth()
         )
         CalculatorBodySection(
