@@ -1,4 +1,4 @@
-package com.pesta.basiccalculator.feature_calculator.presentaion.calculator_screen
+package com.pesta.basiccalculator.feature_calculator.presentaion.calculator_screen.sections
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
