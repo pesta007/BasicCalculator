@@ -1,6 +1,7 @@
 package com.pesta.basiccalculator.feature_calculator.presentaion.calculator_screen.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -24,8 +25,9 @@ import com.pesta.basiccalculator.ui.theme.Pink
 fun CalculatorButton(
     label: String,
     color: Color,
-    textSize: TextUnit = 24.sp,
-    modifier: Modifier = Modifier
+    onClick: (value: String) -> Unit,
+    modifier: Modifier = Modifier,
+    textSize: TextUnit = 24.sp
 ){
     Box(
         modifier = modifier.background(color),
@@ -37,6 +39,7 @@ fun CalculatorButton(
                 .background(color)
                 .clip(RoundedCornerShape(4.dp))
                 .shadow(elevation = 2.dp, ambientColor = Color.White)
+                .clickable { onClick(label) }
         ){
             Text(text = label, modifier = Modifier.align(Alignment.Center), fontSize = textSize)
         }
@@ -50,6 +53,7 @@ private fun CalculatorButtonPreview() {
         CalculatorButton(
             label = "1",
             color = Pink,
+            onClick = {},
             modifier = Modifier.size(100.dp)
         )
     }

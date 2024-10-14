@@ -36,21 +36,25 @@ fun CalculatorBodySection(
             CalculatorButton(
                 label = "AC",
                 color = Pink,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
             CalculatorButton(
                 label = "^",
                 color = Pink,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
             CalculatorButton(
                 label = "%",
                 color = Pink,
-                modifier = buttonModifier
+                onClick = onButtonClicked,
+                modifier = buttonModifier,
             )
             CalculatorButton(
                 label = "/",
                 color = Pink,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
         }
@@ -60,21 +64,25 @@ fun CalculatorBodySection(
             CalculatorButton(
                 label = "7",
                 color = Blue,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
             CalculatorButton(
                 label = "8",
                 color = Blue,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
             CalculatorButton(
                 label = "9",
                 color = Blue,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
             CalculatorButton(
                 label = "x",
                 color = Pink,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
         }
@@ -84,21 +92,25 @@ fun CalculatorBodySection(
             CalculatorButton(
                 label = "4",
                 color = Blue,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
             CalculatorButton(
                 label = "5",
                 color = Blue,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
             CalculatorButton(
                 label = "6",
                 color = Blue,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
             CalculatorButton(
                 label = "-",
                 color = Pink,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
         }
@@ -108,21 +120,25 @@ fun CalculatorBodySection(
             CalculatorButton(
                 label = "1",
                 color = Blue,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
             CalculatorButton(
                 label = "2",
                 color = Blue,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
             CalculatorButton(
                 label = "3",
                 color = Blue,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
             CalculatorButton(
                 label = "+",
                 color = Pink,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
         }
@@ -132,21 +148,25 @@ fun CalculatorBodySection(
             CalculatorButton(
                 label = "0",
                 color = Blue,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
             CalculatorButton(
                 label = ".",
                 color = Blue,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
             CalculatorButton(
                 label = "DEL",
                 color = Blue,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
             CalculatorButton(
                 label = "=",
                 color = Orange,
+                onClick = onButtonClicked,
                 modifier = buttonModifier
             )
         }
@@ -161,6 +181,6 @@ private fun CalculatorBodySectionPreview() {
             modifier = Modifier.fillMaxWidth(),
             horizontalSpacing = 0.dp,
             verticalSpacing = 0.dp
-        ) {  }
+        ) { }
     }
 }
