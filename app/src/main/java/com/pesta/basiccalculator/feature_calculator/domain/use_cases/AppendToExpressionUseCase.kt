@@ -2,8 +2,9 @@ package com.pesta.basiccalculator.feature_calculator.domain.use_cases
 
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.last
+import javax.inject.Inject
 
-class AppendToExpressionUseCase(
+class AppendToExpressionUseCase @Inject constructor(
     private val getExpression: GetExpressionUseCase,
     private val updateExpression: UpdateExpressionUseCase
 ) {

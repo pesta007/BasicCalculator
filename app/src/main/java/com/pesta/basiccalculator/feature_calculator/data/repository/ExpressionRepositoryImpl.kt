@@ -3,8 +3,9 @@ package com.pesta.basiccalculator.feature_calculator.data.repository
 import com.pesta.basiccalculator.feature_calculator.domain.repository.ExpressionRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import javax.inject.Inject
 
-class ExpressionRepositoryImpl: ExpressionRepository {
+class ExpressionRepositoryImpl @Inject constructor(): ExpressionRepository {
 
     private val _expression = MutableStateFlow("0")
 

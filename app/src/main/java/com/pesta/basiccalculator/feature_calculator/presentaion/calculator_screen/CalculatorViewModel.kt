@@ -6,9 +6,12 @@ import com.pesta.basiccalculator.feature_calculator.domain.use_cases.AppendToExp
 import com.pesta.basiccalculator.feature_calculator.domain.use_cases.GetExpressionUseCase
 import com.pesta.basiccalculator.feature_calculator.domain.use_cases.ResetExpressionUseCase
 import com.pesta.basiccalculator.feature_calculator.domain.use_cases.UndoLastEntryUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class CalculatorViewModel(
+@HiltViewModel
+class CalculatorViewModel @Inject constructor(
     private val appendToExpression: AppendToExpressionUseCase,
     getExpression: GetExpressionUseCase,
     private val undoLastEntry: UndoLastEntryUseCase,
